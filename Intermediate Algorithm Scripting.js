@@ -223,7 +223,7 @@ function whatIsInAName(collection, source) {
   
   uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 
-  //    //      //
+  //    //      //Convert HTML Entities
 
   function convertHTML(str) {
     // Split by character to avoid problems.
@@ -258,3 +258,22 @@ function whatIsInAName(collection, source) {
   
   //test here
   convertHTML("Dolce & Gabbana");
+
+            //      //      //Sum All Odd Fibonacci Numbers
+  function sumFibs(num) {
+    let prevNumber = 0;
+    let currNumber = 1;
+    let result = 0;
+    while (currNumber <= num) {
+      if (currNumber % 2 !== 0) {
+        result += currNumber;
+      }
+      currNumber += prevNumber;
+      prevNumber = currNumber - prevNumber;
+    }
+  
+    return result;
+  }
+  
+  // test here
+  sumFibs(4);
